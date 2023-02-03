@@ -1,0 +1,22 @@
+---
+
+version: "3"
+services:
+  unifi:
+    image: jacobalberty/unifi:latest
+    container_name: unifi
+    network_mode: {{ unifi_docker_network_mode }}
+    user: unifi
+    environment:
+      - TZ=Europe/Amsterdam
+    volumes:
+      - "{{ unifi_docker_volume }}:/unifi"
+{% if unifi_docker_network_mode == 'bridge' %}
+    ports:
+      - 8080:8080
+      - 8443:8443
+      - 3478:3478/udp
+      - 10001:10001/udp
+      - 1900:1900/udp
+{% endif %}
+    restart: unless-stopped

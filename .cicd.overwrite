@@ -1,0 +1,14 @@
+---
+
+# Generic
+generic:
+  role: ansible-role-unifi_docker
+  role_short: unifi_docker
+  role_description: |
+    Sets up a Docker container with UniFi Network Application
+  collections: []
+
+molecule:
+  requirements:
+    roles_extra:
+      - deitkrachten.firewall
