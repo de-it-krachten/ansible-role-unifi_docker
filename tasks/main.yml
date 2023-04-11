@@ -25,7 +25,7 @@
 
 - name: Open required firewall ports
   ansible.builtin.include_role:
-    name: firewall
+    name: deitkrachten.firewall
   vars:
     firewall_ports: "{{ unifi_fw_ports }}"
   when: unifi_docker_network_mode == 'host'
