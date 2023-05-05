@@ -1,0 +1,10 @@
+---
+
+- name: Open required firewall ports
+  ansible.builtin.include_role:
+    name: deitkrachten.firewall
+  vars:
+    firewall_ports: "{{ unifi_fw_ports }}"
+  when:
+    - unifi_docker_network_mode == 'host'
+    - lookup('env', 'MOLECULE_DRIVER_NAME') | length == 0

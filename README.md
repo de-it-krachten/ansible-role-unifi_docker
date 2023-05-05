@@ -69,8 +69,6 @@ unifi_fw_ports:
 - name: sample playbook for role 'unifi_docker'
   hosts: all
   become: "yes"
-  roles:
-    - deitkrachten.showinfo
   tasks:
     - name: Include role 'unifi_docker'
       ansible.builtin.include_role:

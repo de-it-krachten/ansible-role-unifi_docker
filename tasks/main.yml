@@ -5,27 +5,8 @@
     that:
       - unifi_docker_data is defined
 
-- name: Create location to export files to docker container from
-  ansible.builtin.file:
-    path: "{{ unifi_docker_data }}"
-    state: directory
-    owner: root
-    group: "{{ unifi_docker_group | default('root') }}"
-    mode: "0750"
+- name: Setup docker container w/ unifi
+  ansible.builtin.include_tasks: install.yml
 
-- name: Create unifi configuration files
-  ansible.builtin.template:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
-    mode: "{{ item.mode | default('0644') }}"
-  loop:
-    - src: templates/docker-compose.yml.j2
-      dest: "{{ unifi_docker_data }}/docker-compose.yml"
-  notify: Restart services
-
-- name: Open required firewall ports
-  ansible.builtin.include_role:
-    name: deitkrachten.firewall
-  vars:
-    firewall_ports: "{{ unifi_fw_ports }}"
-  when: unifi_docker_network_mode == 'host'
+- name: Configure host
+  ansible.builtin.include_tasks: config.yml
