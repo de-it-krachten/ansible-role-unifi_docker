@@ -1,0 +1,18 @@
+---
+
+# Base path where docker compose & volume path will exist
+unifi_docker_data: /export/docker/unifi
+
+# Docker volume with persistant unifi data
+unifi_docker_volume: "{{ unifi_docker_data }}/unifi"
+
+# Netowrk mode for docker container to operate in
+unifi_docker_network_mode: host
+
+# List of firewall ports to open for unifi
+unifi_fw_ports:
+  - { port: 8080, proto: tcp }
+  - { port: 8443, proto: tcp }
+  - { port: 3478, proto: udp }
+  - { port: 1900, proto: udp }
+  - { port: 10001, proto: udp }

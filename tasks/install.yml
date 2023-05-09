@@ -1,0 +1,19 @@
+---
+
+- name: Create location to export files to docker container from
+  ansible.builtin.file:
+    path: "{{ unifi_docker_data }}"
+    state: directory
+    owner: root
+    group: "{{ unifi_docker_group | default('root') }}"
+    mode: "0750"
+
+- name: Create unifi configuration files
+  ansible.builtin.template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode | default('0644') }}"
+  loop:
+    - src: templates/docker-compose.yml.j2
+      dest: "{{ unifi_docker_data }}/docker-compose.yml"
+  notify: Restart services
