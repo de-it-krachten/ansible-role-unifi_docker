@@ -13,7 +13,7 @@ Sets up a Docker container with UniFi Network Application
 None
 
 #### Collections
-- community.general
+- community.docker
 
 ## Platforms
 
@@ -35,8 +35,9 @@ Supported platforms
 - Ubuntu 18.04 LTS<sup>1</sup>
 - Ubuntu 20.04 LTS<sup>1</sup>
 - Ubuntu 22.04 LTS<sup>1</sup>
-- Fedora 37<sup>1</sup>
-- Fedora 38<sup>1</sup>
+- Ubuntu 24.04 LTS
+- Fedora 39<sup>1</sup>
+- Fedora 40<sup>1</sup>
 - Alpine 3<sup>1</sup>
 
 Note:
@@ -71,7 +72,7 @@ unifi_fw_ports:
 <pre><code>
 - name: sample playbook for role 'unifi_docker'
   hosts: all
-  become: "yes"
+  become: 'yes'
   tasks:
     - name: Include role 'unifi_docker'
       ansible.builtin.include_role:
