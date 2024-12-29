@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-unifi_docker/compare/v1.2.0...v1.3.0) (2024-12-29)
+
+
+### Features
+
+* Update supported platforms & CI ([4989305](https://github.com/de-it-krachten/ansible-role-unifi_docker/commit/498930534ab53dfd0d661cd201f688461ee23ea6))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-unifi_docker/compare/v1.1.0...v1.2.0) (2024-06-04)
 
 
