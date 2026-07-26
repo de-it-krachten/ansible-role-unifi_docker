@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/de-it-krachten/ansible-role-unifi_docker/compare/v1.5.0...v1.6.0) (2026-07-26)
+
+
+### Features
+
+* Added support for Fedora 44 ([800579b](https://github.com/de-it-krachten/ansible-role-unifi_docker/commit/800579b633c960d9aad7ab0b6a81b1c54d145035))
+* Added support for Ubuntu 26.04 LTS ([01af402](https://github.com/de-it-krachten/ansible-role-unifi_docker/commit/01af40296f464bdabb98d9997246ed46c5b3ee6d))
+* Drop support for Fedora 42 ([6974c6c](https://github.com/de-it-krachten/ansible-role-unifi_docker/commit/6974c6c79a88c072ac573a8eaf8232d0ae289ff0))
+
 # [1.5.0](https://github.com/de-it-krachten/ansible-role-unifi_docker/compare/v1.4.0...v1.5.0) (2026-03-15)
 
 
