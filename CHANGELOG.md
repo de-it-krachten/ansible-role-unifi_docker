@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/de-it-krachten/ansible-role-unifi_docker/compare/v1.6.0...v1.7.0) (2026-10-13)
+
+
+### Features
+
+* Drop support for Debian 11 (Bullseye) ([8bef6df](https://github.com/de-it-krachten/ansible-role-unifi_docker/commit/8bef6df1a7e2c2a95fae9c49ad75861085a208f7))
+
 # [1.6.0](https://github.com/de-it-krachten/ansible-role-unifi_docker/compare/v1.5.0...v1.6.0) (2026-07-26)
 
 
